@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <link rel="stylesheet" href="{% static 'services.css' %}">
+</head>
+<main>
+  <div class="main-content">
+    <h1>Tutorials</h1>
+    <ul>
+      {% for tutorial in tutorials %}
+        <li>{{ tutorial.title }}</li>
+        <li><video controls>
+            <source src="{{ tutorial.video }}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video></li>
+      {% endfor %}
+    </ul>
+  </div>
+</main>
+{% endblock %}

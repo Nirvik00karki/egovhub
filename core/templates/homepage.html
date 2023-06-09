@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<main>
+  <div class="main-content">
+    <h1>Welcome to e-Gov Hub</h1>
+    <p>Discover a wide range of e-government services provided by the government.</p>
+    <a href="/services/" class="btn">Explore Services</a>
+  </div>
+  <div class="image-container">
+    <img src="{% static 'images/egov_img.jpg' %}" alt="egovimg">
+  </div>
+  <!-- <section class="categories">
+    <h2>Popular Categories</h2>
+    {% for category in categories %}
+    <div class="category">
+      <h3>{{ category.name }}</h3>
+      <p>{{ category.description }}</p>
+      <a href="/categories/{{ category.id }}/services/">View Services</a>
+    </div>
+    {% endfor %}
+  </section>
+  <section class="services">
+    <h2>Featured Services</h2>
+    {% for service in services %}
+    <div class="service">
+      <h3>{{ service.name }}</h3>
+      <p>{{ service.description }}</p>
+      <a href="/services/{{ service.id }}/">{{ service.name }}</a>
+    </div>
+    {% endfor %}
+  </section> -->
+</main>
+{% endblock %}

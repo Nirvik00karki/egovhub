@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <link rel="stylesheet" href="{% static 'services.css' %}">
+</head>
+<main>
+  <div class="main-content">
+    <h1>Services</h1>
+    <ul>
+      {% for service in services %}
+        <li>{{ service.name }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</main>
+{% endblock %}

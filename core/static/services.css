@@ -1,0 +1,49 @@
+/* styles.css */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  /* Services Page */
+  .services-page {
+    background-color: #f7f7f7;
+    padding: 20px;
+  }
+  
+  /* Categories Page */
+  .categories-page {
+    background-color: #f7f7f7;
+    padding: 20px;
+  }
+  
+  /* Tutorials Page */
+  .tutorials-page {
+    background-color: #f7f7f7;
+    padding: 20px;
+  }
+  
+  
