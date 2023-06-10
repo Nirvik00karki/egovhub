@@ -7,6 +7,10 @@
 <main>
   <div class="main-content">
     <h1>Tutorials</h1>
+    <div class="search-bar">
+      <input type="text" id="tutorial-search" placeholder="Search tutorials by title">
+      <button type="button" id="search-button">Search</button>
+    </div>
     <ul>
       {% for tutorial in tutorials %}
         <li>{{ tutorial.title }}</li>
@@ -18,4 +22,5 @@
     </ul>
   </div>
 </main>
+<script src="{% static 'tutorialsearch.js' %}"></script>
 {% endblock %}

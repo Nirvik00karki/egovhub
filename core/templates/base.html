@@ -5,7 +5,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>e-Gov Hub</title>
-  <link rel="stylesheet" href="{% static 'homepage.css' %}"> <!-- Link to your custom CSS file -->
+  <link rel="stylesheet" href="{% static 'homepage.css' %}">
+  <style>
+    .search-bar {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-grow: 1;
+    }
+  
+    .search-bar input[type="text"] {
+      width: 200px;
+      padding: 8px;
+      font-size: 16px;
+    }
+  
+    .search-bar button {
+      padding: 8px 16px;
+      font-size: 16px;
+    }
+  
+    .navigation-menu {
+      margin-left: auto;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -17,14 +40,16 @@
         <li><a href="/">Home</a></li>
         <li><a href="/services/">Services</a></li>
         <li><a href="/categories/">Categories</a></li>
-        <li><a href="/tutorials/">Tutorials</a></li>
+        <li><a href="/services/1/tutorials/">Tutorials</a></li>
         <li><a href="/register/">Register</a></li>
         <li><a href="/login/">Login</a></li>
-        <li><a href="#">How It Works</a></li>
-        <li><a href="#">User Registration</a></li>
         <li><a href="#">Feedback & Suggestions</a></li>
         <li><a href="#">About Us</a></li>
       </ul>
+      <div class="search-bar">
+        <input type="text" id="service-search" placeholder="Search services">
+        <button type="button" id="search-button">Search</button>
+      </div>
     </nav>
   </header>
 
@@ -34,5 +59,17 @@
   <footer>
     <p>&copy; 2023 e-Gov Hub. All rights reserved.</p>
   </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const searchButton = document.getElementById('search-button');
+      const serviceSearchInput = document.getElementById('service-search');
+
+      searchButton.addEventListener('click', function() {
+        const searchText = serviceSearchInput.value.toLowerCase();
+        // Perform the search functionality here based on the entered search query
+        // Update the services list or redirect to the search results page accordingly
+      });
+    });
+  </script>
 </body>
 </html>
