@@ -7,11 +7,28 @@
 <main>
   <div class="main-content">
     <h1>Categories</h1>
-    <ul>
-      {% for category in categories %}
-        <li>{{ category.name }}</li>
-      {% endfor %}
-    </ul>
-  </div>
+      <div class="section web-header">
+        <div class="container-fluid mt-3">
+            <div class="row">
+              <div class="col-lg-3 mx-auto">
+                {% for category in categories %}
+                <div class="list-group">
+                    <li class="list-group-item">{{ category.name }}</li>
+                  <!-- More list group items here -->
+                </div>
+                {% endfor %}
+              </div>
+              <div class="col-lg-9 mx-auto">
+                <!-- Content for the container that exits to the right -->
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem hic ratione laboriosam, itaque doloribus, possimus eligendi, nemo cum molestiae magnam odio culpa inventore vitae perferendis nihil quasi! Alias, repudiandae quibusdam.
+                </p>
+              </div>
+            </div>
+            
+          </div>
+       
+    </div>
+    </div>
 </main>
 {% endblock %}

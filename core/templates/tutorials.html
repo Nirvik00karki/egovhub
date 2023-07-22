@@ -11,6 +11,7 @@
       <input type="text" id="tutorial-search" placeholder="Search tutorials by title">
       <button type="button" id="search-button">Search</button>
     </div>
+    <div class="tutorial-body">
     <ul>
       {% for tutorial in tutorials %}
         <li>{{ tutorial.title }}</li>
@@ -20,6 +21,7 @@
           </video></li>
       {% endfor %}
     </ul>
+  </div>
   </div>
 </main>
 <script src="{% static 'tutorialsearch.js' %}"></script>

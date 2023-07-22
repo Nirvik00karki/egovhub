@@ -2,34 +2,49 @@
 {% load static %}
 
 {% block content %}
-<main>
-  <div class="main-content">
-    <h1>Welcome to e-Gov Hub</h1>
-    <p>Discover a wide range of e-government services provided by the government.</p>
-    <a href="/services/" class="btn">Explore Services</a>
-  </div>
-  <div class="image-container">
-    <img src="{% static 'images/egov_img.jpg' %}" alt="egovimg">
-  </div>
-  <!-- <section class="categories">
-    <h2>Popular Categories</h2>
-    {% for category in categories %}
-    <div class="category">
-      <h3>{{ category.name }}</h3>
-      <p>{{ category.description }}</p>
-      <a href="/categories/{{ category.id }}/services/">View Services</a>
+<head>
+    <link rel="stylesheet" href="{% static 'Bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css' %}"
+        integrity="sha512-8M8By+q+SldLyFJbybaHoAPD6g07xyOcscIOQEypDzBS+sTde5d6mlK2ANIZPnSyxZUqJfCNuaIvjBUi8/RS0w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+    <script src="{% static 'js/Home.js' %}"></script>
+    
+</head>
+<div class="section web-header">
+    <div class="header-container">
+        <div class="header-content">
+            <h3>Welcome To</h3>
+            <h1>E-Gov Hub</h1>
+            <p>A Comprehensive Guide to Digital Government Services of Nepal</p>
+            <a href="/categories/">Explore service</a>
+        </div>
     </div>
-    {% endfor %}
-  </section>
-  <section class="services">
-    <h2>Featured Services</h2>
-    {% for service in services %}
-    <div class="service">
-      <h3>{{ service.name }}</h3>
-      <p>{{ service.description }}</p>
-      <a href="/services/{{ service.id }}/">{{ service.name }}</a>
+</div>
+
+<section class="section section1">
+    <div class="info">
+        <h1>Nepal</h1>
+        <a href="" class="button">Learn More</a>
     </div>
-    {% endfor %}
-  </section> -->
-</main>
+</section>
+
+<section class="section section2">
+    <div class="section-container">
+        <div class="info">
+            <h1>Nepal</h1>
+            <a href="" class="button">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<section class="section section3">
+    <div class="section-container">
+        <div class="info">
+            <h1>Nepal <br>Nepal</h1>
+            <a href="" class="button">Learn More</a>
+        </div>
+    </div>
+</section>
 {% endblock %}

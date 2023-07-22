@@ -1,75 +1,83 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>e-Gov Hub</title>
-  <link rel="stylesheet" href="{% static 'homepage.css' %}">
-  <style>
-    .search-bar {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      flex-grow: 1;
-    }
-  
-    .search-bar input[type="text"] {
-      width: 200px;
-      padding: 8px;
-      font-size: 16px;
-    }
-  
-    .search-bar button {
-      padding: 8px 16px;
-      font-size: 16px;
-    }
-  
-    .navigation-menu {
-      margin-left: auto;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>E-GOV Hub</title>
+    <link rel="stylesheet" href="{% static 'Bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css' %}"
+        integrity="sha512-8M8By+q+SldLyFJbybaHoAPD6g07xyOcscIOQEypDzBS+sTde5d6mlK2ANIZPnSyxZUqJfCNuaIvjBUi8/RS0w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+    <script src="{% static 'js/Home.js' %}"></script>
 </head>
+
 <body>
-  <header>
-    <nav>
-      <div class="logo">
-        <a href="#"><img src="{% static 'images/logo.png' %}" alt="Logo"></a>
-      </div>
-      <ul class="navigation-menu">
-        <li><a href="/">Home</a></li>
-        <li><a href="/services/">Services</a></li>
-        <li><a href="/categories/">Categories</a></li>
-        <li><a href="/services/1/tutorials/">Tutorials</a></li>
-        <li><a href="/register/">Register</a></li>
-        <li><a href="/login/">Login</a></li>
-        <li><a href="#">Feedback & Suggestions</a></li>
-        <li><a href="#">About Us</a></li>
-      </ul>
-      <div class="search-bar">
-        <input type="text" id="service-search" placeholder="Search services">
-        <button type="button" id="search-button">Search</button>
-      </div>
+    <nav id="web-navbar" class="navbar navbar-expand-lg navbar-dark fixed-top py-2">
+        <a class="navbar-brand" href="Home.html"><img src="{% static 'images/E gov hub logo.png' %}" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="Home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="categories.html">categories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tutorial.html">tutorial</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Login</a>
+                </li>
+                <!-- Include the user profile here -->
+            </ul>
+        </div>
     </nav>
-  </header>
 
-  {% block content %}
-  {% endblock %}
+    <div id="fullpage">
+        {% block content %}
+        {% endblock %}
 
-  <footer>
-    <p>&copy; 2023 e-Gov Hub. All rights reserved.</p>
-  </footer>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const searchButton = document.getElementById('search-button');
-      const serviceSearchInput = document.getElementById('service-search');
-
-      searchButton.addEventListener('click', function() {
-        const searchText = serviceSearchInput.value.toLowerCase();
-        // Perform the search functionality here based on the entered search query
-        // Update the services list or redirect to the search results page accordingly
-      });
-    });
-  </script>
+        <section class="section fp-auto-height">
+            <div class="section-container" id="footer">
+                <div class="icon">
+                    <a target="_blank" href="mailto: edukas1.startup@gmail.com">
+                        <span class="fa-stack fa-lg">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fas fa-envelope fa-stack-1x white"></i>
+                        </span>
+                    </a>
+                    <a target="_blank" href="https://www.instagram.com/edukas1/">
+                        <span class="fa-stack fa-lg">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-instagram fa-stack-1x white"></i>
+                        </span>
+                    </a>
+                    <a target="_blank" href="https://twitter.com/S1Eduka">
+                        <span class="fa-stack fa-lg">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-twitter fa-stack-1x white"></i>
+                        </span>
+                    </a>
+                </div>
+                <p>E-gov Hub &copy; 2023. All rights reserved.</p>
+            </div>
+        </section>
+    </div>
 </body>
+
 </html>
